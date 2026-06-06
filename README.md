@@ -1,6 +1,6 @@
-# kvm-qcow-shrink
+# kvm-vm-qcow-shrink
 
-`kvm-qcow-shrink` is a command-line tool written in Go that compresses QCOW2 image files used by KVM virtual machines. It automatically identifies QCOW2 images associated with a specified VM and efficiently compresses them.
+`kvm-vm-qcow-shrink` is a command-line tool written in Go that compresses QCOW2 image files used by KVM virtual machines. It automatically identifies QCOW2 images associated with a specified VM and efficiently compresses them.
 
 ## Features
 
@@ -20,7 +20,7 @@
 
 ## Prerequisites
 
-Before using kvm-qcow-shrink, ensure you have the following installed on your system:
+Before using kvm-vm-qcow-shrink, ensure you have the following installed on your system:
 
 - `virsh` command-line tool
 - `qemu-img` command-line tool
@@ -31,22 +31,22 @@ Before using kvm-qcow-shrink, ensure you have the following installed on your sy
 Build the tool:
 
 ```
-$ go build -o kvm-qcow-shrink
+$ go build -o kvm-vm-qcow-shrink
 ```
 
 ## Usage
 
-To use kvm-qcow-shrink, run the following command with sudo:
+To use kvm-vm-qcow-shrink, run the following command with sudo:
 
 ```
-$ kvm-qcow-shrink <VM_NAME>
+$ kvm-vm-qcow-shrink <VM_NAME>
 ```
 
 Replace `<VM_NAME>` with the name of the KVM virtual machine whose images you want to compress.
 
 Example:
 ```
-$ kvm-qcow-shrink ubuntu-server
+$ kvm-vm-qcow-shrink ubuntu-server
 ```
 
 The tool will then:
