@@ -26,14 +26,6 @@ Before using kvm-vm-qcow-shrink, ensure you have the following installed on your
 - `qemu-img` command-line tool
 - `sudo` access
 
-## Installation
-
-Build the tool:
-
-```
-$ go build -o kvm-vm-qcow-shrink
-```
-
 ## Usage
 
 To use kvm-vm-qcow-shrink, run the following command with sudo:
