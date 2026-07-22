@@ -29,6 +29,11 @@ type Domain struct {
 }
 
 func main() {
+	if len(os.Args) > 1 && (os.Args[1] == "-version" || os.Args[1] == "--version") {
+		printVersion()
+		os.Exit(0)
+	}
+
 	if !commandExists("qemu-img") || !commandExists("virsh") || !commandExists("sudo") {
 		fmt.Println("Required commands (qemu-img, virsh, and/or sudo) are not available. Please install them and try again.")
 		os.Exit(1)
